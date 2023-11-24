@@ -8,25 +8,26 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
 |
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('home');
 });
 
-Route::get('about', function () {
-    return view('about');
+Route::get('produk', function () {
+    $kodeproduk = ['BRG001', 'BRG002'];
+    $namaproduk = ['Buku', 'Pena'];
+    $jenisproduk = ['Alat Tulis', 'Alat Tulis'];
+    $harga = [20000, 15000];
+    $jumlah = count($kodeproduk);
+    return view('produk', compact('kodeproduk', 'namaproduk', 'jenisproduk', 'harga', 'jumlah'));
 });
 
-Route::get('mahasiswa', function () {
-    return view('mahasiswa');
-});
-
-Route::get('profile', function () {
-    $nama = 'Anwar';
-    //  return view('profile', compact('nama'));
-    return view('profile')->with('nama', $nama);
+Route::get('/tambahproduk', function () {
+    $jenisProduk = ['Jenis Produk', 'Alat Tulis', 'Elektronik', 'Sembako'];
+    $jumlahproduk = count($jenisProduk);
+    return view('tambahproduk', compact('jenisProduk', 'jumlahproduk'));
 });
