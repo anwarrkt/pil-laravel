@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\mahasiswaController2;
+use App\Http\Controllers\mahasiswaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,33 +14,32 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//*Route::get('/', function () {
-//   return view ('home');
-
-
+//Route::get('/', function () {
+// return view('home');
+//});
 
 //Route::get('about', function () {
-//  $nama = 'Mhd Hafizh Azman Matondang';
-//return view ('about');
-
-
+// $nama = 'Mhd Hafizh Azman Matondang';
+// return view('about');
+//});
 
 //Route::get('profile', function () {
-//return view ('profile');
-
-
+// return view('profile');
+//});
 
 //Route::get('mahasiswa', function () {
-//return view ('mahasiswa');
-
+//return view('mahasiswa');
+//});
 
 //Route::get('tugas', function () {
-//return view ('tugas');
-
+// return view('tugas');
+//});
 
 //Route::get('/', function () {
-//return view ('home');
+// return view('home');
+//});
 
-Route::get('/', [mahasiswaController2::class, 'index']);
+//Route::get('/',[mahasiswaController2::class,'index']);
 
-Route::resource('/', mahasiswaController2::class);
+Route::resource('mahasiswa', mahasiswaController::class);
+//Route::get('mahasiswa', [mahasiswaController::class, 'index']);

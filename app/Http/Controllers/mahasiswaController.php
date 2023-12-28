@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class mahasiswaController2 extends Controller
+class mahasiswaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,8 +13,8 @@ class mahasiswaController2 extends Controller
      */
     public function index()
     {
-        //halama home
-        return view('pertemuan10/index');
+        //Halaman Home mahasiswa
+        return view('mahasiswa/mahasiswa');
     }
 
     /**
@@ -24,8 +24,8 @@ class mahasiswaController2 extends Controller
      */
     public function create()
     {
-        //tambah
-        return view('pertemuan10/create');
+        //
+        return view('mahasiswa/create');
     }
 
     /**
@@ -36,7 +36,7 @@ class mahasiswaController2 extends Controller
      */
     public function store(Request $request)
     {
-        //menyimpan data 
+        //
     }
 
     /**
@@ -47,8 +47,7 @@ class mahasiswaController2 extends Controller
      */
     public function show($id)
     {
-        //detail
-        //pakai class index
+        //
     }
 
     /**
@@ -59,7 +58,7 @@ class mahasiswaController2 extends Controller
      */
     public function edit($id)
     {
-        //halaman edit
+        //
     }
 
     /**
@@ -71,7 +70,7 @@ class mahasiswaController2 extends Controller
      */
     public function update(Request $request, $id)
     {
-        //menyimpan proses edit
+        //
     }
 
     /**
@@ -82,6 +81,6 @@ class mahasiswaController2 extends Controller
      */
     public function destroy($id)
     {
-        //menghapus
+        //
     }
 }
