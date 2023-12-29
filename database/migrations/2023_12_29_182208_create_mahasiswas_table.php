@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('mahasiswa', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('Npm')->unique();
-            $table->string('nama_mahasiswa', 30)->nullable();
+            $table->integer('npm')->unique();
+            $table->string('nama_mahasiswa', 35)->nullable();
             $table->enum('jk', ['L', 'P']);
-            $table->date('tgl_lahir');
-            $table->text('almat');
+            $table->date('tgl_lahir')->nullable();
+            $table->text('alamat');
             $table->timestamps();
         });
     }
